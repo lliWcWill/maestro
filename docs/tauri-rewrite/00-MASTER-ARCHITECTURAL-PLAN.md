@@ -961,12 +961,25 @@ path = "bin/maestro-mcp.rs"
 
 **Collaboration Note:** Documentation updates should be pushed to the `feature/tauri-cross-platform` branch.
 
-### Phase 1: Foundation
+### Phase 1: Foundation (Complete — 2026-01-31)
 - Scaffold Tauri 2.0 project with React + TypeScript + TailwindCSS
 - Implement ProcessManager (PTY spawn, setsid, basic I/O)
 - Build TerminalView (single xterm.js instance)
 - Establish Tauri Command + Event IPC pattern
 - Result: One working terminal in a Tauri window
+
+#### Phase 1.1 Implementation Status (Complete)
+- Repo: https://github.com/lliWcWill/maestro-linux
+- Branch: `phase-1.1-pty-ipc`
+- PTY spawn/kill with PGID capture, bounded output channel, cwd validation, resize bounds
+- xterm.js TerminalView + TerminalGrid with cleanup and error state
+- Accessible ProjectTabs skeleton with open/close/select and PreLaunch flow
+- CSP baseline for dev, plus general hardening fixes
+
+#### Phase 1.2 (Next)
+- Wire real “Open Project” dialog (Tauri fs APIs) and persist workspace list
+- Promote ProjectTabs to true Workspace model (ProjectTab + WorkspaceState store)
+- Align session/grid model with upcoming multi-project tab architecture (pending author sketch)
 
 ### Phase 2: Session Grid & Worktrees
 - Implement SessionManager + GridConfiguration
