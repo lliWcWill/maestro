@@ -1,5 +1,3 @@
-Here is the comprehensive architectural breakdown of the Maestro application, designed to guide your rewrite to Tauri 2.x (Rust/React).
-
 # Maestro (MacOS) Architectural Analysis
 
 ## 1. Application Architecture
